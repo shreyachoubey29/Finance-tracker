@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations =>  "user/registrations" }
     resources :user_stocks, except: [:edit ,:show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
